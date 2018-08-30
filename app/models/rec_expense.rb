@@ -1,0 +1,2 @@
+class RecExpense < ApplicationRecord
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  billable: false
+  start_time: 2018-08-30 17:18:37
+  end_time: 2018-08-30 17:18:37
+
+two:
+  id: 1
+  billable: false
+  start_time: 2018-08-30 17:18:37
+  end_time: 2018-08-30 17:18:37
