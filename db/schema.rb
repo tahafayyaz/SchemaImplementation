@@ -10,6 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_08_30_122333) do
+
+  create_table "employees", force: :cascade do |t|
+    t.string "name"
+    t.integer "salary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "exp_type"
+    t.float "amount"
+    t.date "month"
+    t.datetime "paid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "paid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "managers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "inv_freq"
+    t.float "hourly_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rec_expenses", force: :cascade do |t|
+    t.string "name"
+    t.string "frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.boolean "billable"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
